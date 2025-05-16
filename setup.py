@@ -4,7 +4,7 @@ with open("README.md", "r", encoding="utf-8") as f:
     long_description = f.read()
 
 ## edit below variables as per your requirements -
-REPO_NAME = "Book Recommender System"
+REPO_NAME = " Book Recommender System"
 AUTHOR_USER_NAME = "RISHIKESH RAJ"
 SRC_REPO = "books_recommender"
 LIST_OF_REQUIREMENTS = []
@@ -18,7 +18,7 @@ setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/Rishikesh1411/Book-Recommender-System",
-    author_email="rishikeshr335@gmail.com",
+    author_email="riishikeshr335@gmail.com",
     packages=find_packages(),
     license="MIT",
     python_requires=">=3.7",
