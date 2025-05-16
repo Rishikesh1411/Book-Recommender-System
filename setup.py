@@ -18,7 +18,7 @@ setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/Rishikesh1411/Book-Recommender-System",
-    author_email="riishikeshr335@gmail.com",
+    author_email="rishikeshr335@gmail.com",
     packages=find_packages(),
     license="MIT",
     python_requires=">=3.7",
