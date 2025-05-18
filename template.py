@@ -7,6 +7,7 @@ logging.basicConfig(level=logging.INFO, format='[%(asctime)s]: %(message)s:')
 
 project_name = "books_recommender"
 
+## Create folders and files
 
 list_of_files = [
     f"{project_name}/__init__.py",
