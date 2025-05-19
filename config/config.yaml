@@ -17,8 +17,8 @@ data_validation_config:
 
 
 
-# data_transformation_config:
-#   transformed_data_dir: transformed_data
+data_transformation_config:
+  transformed_data_dir: transformed_data
 
 
 
