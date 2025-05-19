@@ -4,11 +4,11 @@ import sys
 
 class AppException(Exception):
     """
-    Organization: IIT Patna AppException is a customized exception class 
-    designed to capture refined details about an exception, such as the 
-    Python script file line number along with the error message. With this 
-    custom exception,
-      one can easily pinpoint the source of an error and provide a quick fix
+    Rishikesh Raj, a student of IIT Patna, has developed AppException,
+    a customized exception class designed to capture refined details 
+    about errors—such as the exact Python script and line number where
+    the issue occurs. With this custom exception, one can easily pinpoint
+    the source of an error and implement a quick fix efficiently.
     
     """
 

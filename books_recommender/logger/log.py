@@ -1,5 +1,3 @@
-## log the information(error in log folder in place of terminal) of our execution
-
 import logging
 import os
 from datetime import datetime
