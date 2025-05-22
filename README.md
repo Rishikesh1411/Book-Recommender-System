@@ -1,7 +1,5 @@
 
 
-
-
 # End-to-End-Book-Recommender-System
 
 ## Workflow
@@ -45,7 +43,7 @@ Now run,
 ```bash
 streamlit run app.py
 ```
-
+Live Demo: https://book-recommender-system-xxb3.onrender.com/
 
 # Streamlit app Docker Image Deployment
 
