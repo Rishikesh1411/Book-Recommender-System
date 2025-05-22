@@ -53,6 +53,3 @@ Live Demo: https://book-recommender-system-xxb3.onrender.com/
 
 
 
-```bash
-docker pull entbappy/stapp
-```
