@@ -9,6 +9,8 @@ from books_recommender.pipeline.training_pipeline import TrainingPipeline
 from books_recommender.exception.exception_handler import AppException
 from urllib.error import URLError
 from PIL import Image
+import requests
+from io import BytesIO
 
 class Recommendation:
     def __init__(self,app_config = AppConfiguration()):
@@ -108,6 +110,15 @@ class Recommendation:
             st.error(f"Error showing recommendations: {str(e)}")
             raise AppException(e, sys) from e
 
+def load_image_from_url(url):
+    try:
+        response = requests.get(url)
+        img = Image.open(BytesIO(response.content))
+        return img
+    except Exception as e:
+        st.warning(f"Could not load image from URL: {url}")
+        return None
+
 if __name__ == "__main__":
     # Set page config
     st.set_page_config(
@@ -116,14 +127,12 @@ if __name__ == "__main__":
         layout="wide"
     )
     
-    # Load images
-    try:
-        author_image = Image.open(r"C:\Users\Rishikesh\Desktop\projects\e_commerce_recommender_system\Book-Recommender-System\pic\rishikesh1.jpg")
-        org_image = Image.open(r"C:\Users\Rishikesh\Desktop\projects\e_commerce_recommender_system\Book-Recommender-System\pic\organisation.jpeg")
-    except FileNotFoundError as e:
-        st.warning(f"Image not found: {str(e)}")
-        author_image = None
-        org_image = None
+    # Load images from GitHub URLs
+    author_image_url = "https://github.com/Rishikesh1411/Book-Recommender-System/blob/main/pic/rishikesh1.jpg?raw=true"
+    org_image_url = "https://github.com/Rishikesh1411/Book-Recommender-System/blob/main/pic/organisation.jpeg?raw=true"
+    
+    author_image = load_image_from_url(author_image_url)
+    org_image = load_image_from_url(org_image_url)
     
     # Sidebar with author info
     with st.sidebar:
